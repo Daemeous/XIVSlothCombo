@@ -228,7 +228,7 @@ namespace XIVSlothCombo.Combos.PvE
                         gauge.HutonTimer > 0 && ArmorCrush.LevelChecked() &&
                         comboTime > 1f)
                     {
-                        if (IsEnabled(CustomComboPreset.NIN_ST_AdvancedMode_TrueNorth) && TargetNeedsPositionals() &&
+                        if (TargetNeedsPositionals() && IsEnabled(CustomComboPreset.NIN_ST_AdvancedMode_TrueNorth) && 
                             GetRemainingCharges(All.TrueNorth) > 0 &&
                             All.TrueNorth.LevelChecked() && !HasEffect(All.Buffs.TrueNorth) &&
                             canWeave)
@@ -395,7 +395,7 @@ namespace XIVSlothCombo.Combos.PvE
                         if (lastComboMove == SpinningEdge && GustSlash.LevelChecked())
                             return OriginalHook(GustSlash);
 
-                        if (IsEnabled(CustomComboPreset.NIN_ST_AdvancedMode_TrueNorth) && TargetNeedsPositionals() &&
+                        if (TargetNeedsPositionals() && IsEnabled(CustomComboPreset.NIN_ST_AdvancedMode_TrueNorth) && 
                             IsNotEnabled(CustomComboPreset.NIN_ST_AdvancedMode_TrueNorth_ArmorCrush) &&
                             lastComboMove == GustSlash && GetRemainingCharges(All.TrueNorth) > 0 &&
                             All.TrueNorth.LevelChecked() && !HasEffect(All.Buffs.TrueNorth) &&
